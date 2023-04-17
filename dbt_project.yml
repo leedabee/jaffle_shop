@@ -34,5 +34,4 @@ models:
       +database: lblackwell
       +schema: default
 
- on-run-end: "{{ dbt_artifacts.upload_results(results) }}"
 on-run-end: "{{ dbt_artifacts.upload_results(results) }}"
