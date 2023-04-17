@@ -24,3 +24,12 @@ models:
       materialized: table
       staging:
         materialized: view
+ dbt_artifacts:
+   +database: lblackwell 
+   +schema: dbt_artifacts 
+   staging:
+     +database: lblackwell
++schema: dbt_artifacts_stg 
+   sources:
+     +database: lblackwell  
+     +schema: dbt_artifacts_raw
