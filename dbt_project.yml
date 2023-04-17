@@ -24,14 +24,5 @@ models:
       materialized: table
       staging:
         materialized: view
-  dbt_artifacts:
-    +database: lblackwell 
-    +schema: default
-    staging:
-      +database: lblackwell
-      +schema: default 
-    sources:
-      +database: lblackwell
-      +schema: default
 
 on-run-end: "{{ dbt_artifacts.upload_results(results) }}"
