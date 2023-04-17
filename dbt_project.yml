@@ -33,5 +33,5 @@ models:
     sources:
       +database: lblackwell
       +schema: dbt_artifacts_raw
-
- on-run-end: "{{ dbt_artifacts.upload_results(results) }}"
+      
+on-run-end: "{{ dbt_artifacts.upload_results(results) }}"
