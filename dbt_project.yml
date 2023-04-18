@@ -24,11 +24,5 @@ models:
       materialized: table
       staging:
         materialized: view
-  dbt_artifacts:
-    +schema: dbt_artifacts
-    staging:
-      +schema: dbt_artifacts_stg
-    sources:
-      +schema: dbt_artifacts_sources
   
 on-run-end: "{{ dbt_artifacts.upload_results(results) }}"
